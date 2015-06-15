@@ -1,0 +1,55 @@
+{
+  "name": "react-avatr",
+  "version": "1.0.0",
+  "description": "An avatar component built with and for ReactJS",
+  "main": "lib/Avatr.js",
+  "scripts": {
+    "test": "jest; true",
+    "build": "gulp clean && NODE_ENV=production gulp build",
+    "bump": "gulp bump",
+    "bump:major": "gulp bump:major",
+    "bump:minor": "gulp bump:minor",
+    "dev": "gulp dev",
+    "examples": "gulp dev:server",
+    "lint": "eslint .",
+    "release": "gulp release",
+    "watch": "gulp watch:lib"
+  },
+  "keywords": [
+    "reactjs",
+    "react-avatr",
+    "react-avatar",
+    "component",
+    "react-component"
+  ],
+  "author": "Mathieu Doyon <mathieu.doyon@studiofrenetic.com>",
+  "license": "MIT",
+  "dependencies": {
+    "MD5": "^1.2.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^3.1.15",
+    "babel-jest": "^5.2.0",
+    "eslint": "^0.22.1",
+    "eslint-plugin-react": "^2.5.0",
+    "gulp": "^3.9.0",
+    "jest-cli": "^0.4.12",
+    "react": "^0.13.3",
+    "react-component-gulp-tasks": "^0.7.0"
+  },
+  "peerDependencies": {
+    "react": ">=0.12.0"
+  },
+  "browserify-shim": {
+    "react": "global:React"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react"
+    ],
+    "testPathDirs": [
+      "<rootDir>/src"
+    ]
+  }
+}

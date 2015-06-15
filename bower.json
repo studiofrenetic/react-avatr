@@ -1,0 +1,29 @@
+{
+  "name": "react-avatr",
+  "version": "1.0.0",
+  "authors": [
+    "Mathieu Doyon <mathieu.doyon@studiofrenetic.com>"
+  ],
+  "description": "An avatar component built with and for ReactJS",
+  "main": "dist/react-avatr.min.js",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "reactjs",
+    "react-avatr",
+    "react-avatar",
+    "component",
+    "react-component"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
