@@ -1,6 +1,6 @@
 {
   "name": "react-avatr",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "An avatar component built with and for ReactJS",
   "main": "lib/Avatr.js",
   "license": "MIT",
