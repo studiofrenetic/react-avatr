@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "An avatar component built with and for ReactJS",
   "main": "lib/Avatr.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/studiofrenetic/react-avatr"
+  },
   "scripts": {
     "test": "jest; true",
     "build": "gulp clean && NODE_ENV=production gulp build",
@@ -23,7 +28,6 @@
     "react-component"
   ],
   "author": "Mathieu Doyon <mathieu.doyon@studiofrenetic.com>",
-  "license": "MIT",
   "dependencies": {
     "MD5": "^1.2.2"
   },
