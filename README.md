@@ -23,7 +23,7 @@ priority: ['src', 'gravatar', 'facebook', 'google', 'skype', 'name', 'value'] //
 Install the component using [NPM](https://www.npmjs.com/):
 
 ```sh
-$ npm install react-avatar --save
+$ npm install react-avatr --save
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ $ npm install react-avatar --save
 1. Import Custom Element:
 
     ```js
-    var Avatar = require('react-avatr');
+    var Avatr = require('react-avatr');
     ```
 
 2. Start using it!
