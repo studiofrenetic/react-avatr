@@ -159,7 +159,6 @@ var Avatr = React.createClass({
         // next queue method
         if (this.state.priority.length) {
             var next = this.state.priority[0];
-            console.log('next ', next);
             if (next) {
                 this.setState({
                     priority: this.state.priority.slice(1)
@@ -193,7 +192,6 @@ var Avatr = React.createClass({
     },
 
     componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
-        console.log('componentWillReceiveProps');
         if (nextProps.src && nextProps.src !== this.props.src) {
             this.setState({ src: nextProps.src });
         }
@@ -210,7 +208,6 @@ var Avatr = React.createClass({
     },
 
     componentDidMount: function componentDidMount() {
-        console.log('componentDidMount', this.props);
         // fix first mount issue duplicate props.priority first doest not exists anymore
         if (this.state.firstFetch === false) {
             this.setState({
@@ -234,7 +231,7 @@ var Avatr = React.createClass({
             background: this.randomColor(),
             width: this.props.size,
             height: this.props.size,
-            font: Math.floor(this.props.size / 3) + 'px/100px Helvetica, Arial, sans-serif',
+            font: Math.floor(this.props.size / 2.5) + 'px/100px Helvetica, Arial, sans-serif',
             color: '#FFF',
             textAlign: 'center',
             textTransform: 'uppercase',
