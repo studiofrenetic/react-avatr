@@ -1,59 +1,54 @@
 {
   "name": "react-avatr",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "An avatar component built with and for ReactJS",
-  "main": "lib/Avatr.js",
+  "author": "Studio Frenetic",
+  "main": "./lib/index.js",
+  "keywords": [
+    "react",
+    "react-component",
+    "avatar",
+    "avatr"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/studiofrenetic/react-avatr"
   },
-  "scripts": {
-    "test": "jest; true",
-    "build": "gulp clean && NODE_ENV=production gulp build",
-    "bump": "gulp bump",
-    "bump:major": "gulp bump:major",
-    "bump:minor": "gulp bump:minor",
-    "dev": "gulp dev",
-    "examples": "gulp dev:server",
-    "lint": "eslint .",
-    "release": "gulp release",
-    "watch": "gulp watch:lib"
-  },
-  "keywords": [
-    "reactjs",
-    "react-avatr",
-    "react-avatar",
-    "component",
-    "react-component"
-  ],
-  "author": "Mathieu Doyon <mathieu.doyon@studiofrenetic.com>",
   "dependencies": {
-    "MD5": "^1.2.2"
-  },
-  "devDependencies": {
-    "babel-eslint": "^3.1.15",
-    "babel-jest": "^5.2.0",
-    "eslint": "^0.22.1",
-    "eslint-plugin-react": "^2.5.0",
-    "gulp": "^3.9.0",
-    "jest-cli": "^0.4.12",
-    "react": "^0.13.3",
-    "react-component-gulp-tasks": "^0.7.0"
+    "md5": "^2.0.0"
   },
   "peerDependencies": {
-    "react": ">=0.12.0"
+    "react": "~0.14",
+    "react-dom": "~0.14"
   },
-  "browserify-shim": {
-    "react": "global:React"
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-core": "^5.8.25",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^5.3.2",
+    "chai": "^3.3.0",
+    "eslint": "^1.6.0",
+    "eslint-plugin-react": "^3.5.1",
+    "html-webpack-plugin": "^1.6.2",
+    "jsdom": "^7.0.2",
+    "mocha": "^2.3.3",
+    "react": "^0.14.1",
+    "react-addons-test-utils": "^0.14.1",
+    "react-color": "^1.2.1",
+    "react-dom": "^0.14.1",
+    "react-hot-loader": "^1.3.0",
+    "sinon": "^1.17.2",
+    "sinon-chai": "^2.8.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.0"
   },
-  "jest": {
-    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
-    "unmockedModulePathPatterns": [
-      "<rootDir>/node_modules/react"
-    ],
-    "testPathDirs": [
-      "<rootDir>/src"
-    ]
+  "scripts": {
+    "test": "mocha --compilers js:babel/register --recursive --require ./test/setup.js",
+    "lint": "./node_modules/.bin/eslint ./src ./test",
+    "prebuild": "rm -rf lib",
+    "build": "npm run lint && babel --stage 0 ./src --out-dir ./lib",
+    "prepublish": "npm run build",
+    "dev": "webpack-dev-server --config ./dev/webpack.config.js --colors --inline --port 3000"
   }
 }
