@@ -56,6 +56,3 @@ Some examples:
 ## License
 
 [MIT License](http://opensource.org/licenses/MIT)
-
-## Todo
-* Add Jest unit tests
