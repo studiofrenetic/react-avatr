@@ -36,7 +36,7 @@ export default class Avatr extends Component {
     value: null
   };
 
-  componentWillMount() {
+  componentDidMount() {
     const { priority, value } = this.props;
     this.setState({
       background: this.randomColor(),
