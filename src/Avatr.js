@@ -249,7 +249,6 @@ export default class Avatr extends Component {
       font: Math.floor(size / 2.5) + 'px/100px Helvetica, Arial, sans-serif',
       height: size,
       lineHeight: (size + Math.floor(size/10)) + 'px',
-      position: 'absolute',
       textAlign: 'center',
       textTransform: 'uppercase',
       width: size
