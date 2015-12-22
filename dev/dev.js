@@ -21,11 +21,23 @@ document.body.innerHTML = `
 `;
 
 class Dev extends Component {
+  state = {
+    avatarSrc: 'https://placeimg.com/100/100/animals'
+  };
+
+  handleChangeSource(event) {
+    this.setState({
+      avatarSrc: 'https://placeimg.com/100/100/arch'
+    });
+  }
+
   render() {
+    const {avatarSrc} = this.state;
     return (
       <div>
+        <div><button type="button" onClick={::this.handleChangeSource}>Change source of first</button></div>
         <div>
-          <Avatr src="https://placeimg.com/100/100/animals"/>
+          <Avatr ref="avatarSrc" src={avatarSrc}/>
           <Avatr email="info@studiofrenetic.com"/>
           <Avatr facebookId="711918081"/>
           <Avatr googleId="109698448540584893289" />

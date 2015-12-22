@@ -13,6 +13,7 @@ export default class Avatr extends Component {
     round: PropTypes.bool,
     size: PropTypes.number,
     skypeId: PropTypes.string,
+    src: PropTypes.string,
     value: PropTypes.string
   }
 
@@ -45,6 +46,18 @@ export default class Avatr extends Component {
     }, () => {
       this.fetch();
     });
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { priority, value } = this.props;
+    if (nextProps != this.props) {
+      this.setState({
+        priority: priority,
+        value: value
+      }, () => {
+        this.fetch();
+      });
+    }
   }
 
   getProtocol() {
